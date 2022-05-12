@@ -14,7 +14,7 @@
         </div>
 
         <transition name="open">
-          <image-modal
+          <app-modal
             v-if="isOpen"
             :item="currentCocktail"
             :gradient="true"
@@ -72,13 +72,13 @@
 </template>
 
 <script>
-import ImageModal from '@/components/ImageModal.vue';
+import AppModal from '@/components/AppModal.vue';
 
 export default {
   name: 'CocktailPage',
 
   components: {
-    ImageModal,
+    AppModal,
   },
 
   data: () => ({
@@ -116,14 +116,14 @@ export default {
       this.isOpen = !this.isOpen;
     },
 
-    goTo(target) {
+    goTo(direction) {
       let targetIndex;
       const { cocktailList } = this.$store.state;
 
-      if (target === 'next') {
+      if (direction === 'next') {
         targetIndex = cocktailList.indexOf(this.currentCocktail) + 1;
         targetIndex = targetIndex >= cocktailList.length ? 0 : targetIndex;
-      } else if (target === 'prev') {
+      } else if (direction === 'prev') {
         targetIndex = cocktailList.indexOf(this.currentCocktail) - 1;
         targetIndex = targetIndex < 0 ? cocktailList.length - 1 : targetIndex;
       }

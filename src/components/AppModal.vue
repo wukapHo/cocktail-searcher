@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'ImageModal',
+  name: 'AppModal',
 
   props: {
     item: {
@@ -30,7 +30,6 @@ export default {
   z-index: 50;
   position: absolute;
   top: 0;
-  left: 0;
   width: 50vw;
   height: 100vw;
   border-radius: 1.5rem;

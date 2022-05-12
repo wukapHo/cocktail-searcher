@@ -14,7 +14,7 @@ export default {
   }),
 
   created() {
-    this.currentLocale = localStorage.getItem('currentLocale');
+    this.currentLocale = +localStorage.getItem('currentLocale');
 
     if (this.currentLocale) {
       this.$i18n.locale = this.locales[this.currentLocale];
