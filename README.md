@@ -1,4 +1,5 @@
 # Cocktails
+[Demo](https://bartender-helper.netlify.app/)
 
 ## Project setup
 ```
